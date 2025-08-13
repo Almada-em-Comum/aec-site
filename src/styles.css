@@ -1,0 +1,133 @@
+:root {
+    --black: #221e1f;
+    --white: #ede4e7;
+    --red: #d85c64;
+    --teal: #44aea2;
+    --light-teal: #8bd1c7;
+    --bg-teal: #52d8c9;
+    --bg-red: #ee656e;
+    --bg-white: #efe6e9;
+    --hr-black: #221e1f40;
+    --label-black: #3d3738;
+}
+
+html {
+    font-size: 16;
+}
+
+body {
+    background: radial-gradient(
+        circle at bottom left,
+        var(--bg-teal) 20%,
+        var(--bg-red) 60%,
+        var(--bg-white) 80%
+    );
+    background-attachment: fixed;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-optical-sizing: auto;
+    color: var(--black);
+}
+
+h1 {
+    font-size: 4.5rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+input[type="radio"] {
+    appearance: none;
+    display: none;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+    width: 12em;
+    height: 3em;
+    padding-left: 1em;
+    margin: 0.5em auto 0.5em auto;
+}
+
+input[type="radio"]:checked + label {
+    color: var(--white);
+    background-color: var(--label-black);
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.logos {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.party-logo {
+    height: 6.5rem;
+    width: auto;
+    padding-top: 1rem;
+    padding-right: 0.5rem;
+}
+
+.page-title {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    font-weight: 800;
+}
+
+.subtitle {
+    display: block;
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+.sub-subtitle {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.section-w-bot-ruler > hr {
+    border: var(--hr-black) solid 2px;
+    border-radius: 3px;
+    width: 90%;
+    margin: 2rem auto 2rem auto;
+}
+
+
+.named-paragraph {
+
+}
+
+.photo-nav {
+    display: flex;
+    flex-direction: row;
+}
+
+.photo-nav > img {
+    width: 55%;
+    height: auto;
+}
+
+.photo-nav > nav {
+    margin-left: 3rem;
+}
+
+#content-board {
+    display: flex;
+    flex-direction: column;
+    width: 51.8%;
+    margin: auto;
+    margin-top: -2rem;
+}

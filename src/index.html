@@ -1,64 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Almada em comum - Coligação Bloco de Esquerda e LIVRE</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Almada em comum - Coligação Bloco de Esquerda e LIVRE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div id="content-board">
-    <header>
-        <h1>
-          ALMADA EM COMUM
-          Coligação
-          Bloco de Esquerda
-          LIVRE
-        </h1>
-        <img src="" alt="Logo do partido Bloco de Esquerda" />
-        <img src="" alt="Logo do partido LIVRE" />
+    <header class="logos">
+        <img src="../assets/logo-livre.png" alt="Logo do partido LIVRE" class="party-logo" />
+        <img src="../assets/logo-be.svg" alt="Logo do partido Bloco de Esquerda" class="party-logo" />
     </header>
-    <main>
-      <section>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut egestas
-          elit ac semper rhoncus. Curabitur pellentesque purus in mi viverra
-          semper.
-        </p>
-        <p>
-          Fusce justo urna, convallis quis odio in, faucibus faucibus quam. Class
-          aptent taciti sociosqu ad litora torquent per conubia nostra, per
-          inceptos himenaeos.
-        </p>
-      </section>
-      <section>
-        <img src="" alt="Candidato Jefferson Oliveira" />
-        <nav>
-            <h2>CANDIDATOS</h2>
-            <ul>
-                <li>CM - Sérgio Lourosa Alves</li>
-                <li>CM - Sandra Cunha</li>
-                <li>AM - Jefferson Oliveira</li>
-            </ul>
-        </nav>
-        <h3>
-          JEFFERSON OLIVEIRA
-          Bloco de Esquerda
-          Professor, Ator
-        </h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut egestas
-          elit ac semper rhoncus. Curabitur pellentesque purus in mi viverra
-          semper.
-        </p>
-      </section>
-      <section>
-        <h4>
-          TODO Video
-        </h4>
-      </section>
-    </main>
-  </div>
+    <div id="content-board">
+        <h1 class="page-title">
+            ALMADA EM COMUM
+            <span class="subtitle">
+                Coligação
+            </span>
+            <span class="sub-subtitle">
+                Bloco de Esquerda
+            </span>
+            <span class="sub-subtitle">
+                LIVRE
+            </span>
+        </h1>
+        <main>
+            <section class="named-paragraph section-w-bot-ruler">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut egestas
+                    elit ac semper rhoncus. Curabitur pellentesque purus in mi viverra
+                    semper.
+                </p>
+                <p>
+                    Fusce justo urna, convallis quis odio in, faucibus faucibus quam. Class
+                    aptent taciti sociosqu ad litora torquent per conubia nostra, per
+                    inceptos himenaeos.
+                </p>
+                <hr />
+            </section>
+            <section class="named-paragraph section-w-bot-ruler">
+                <section class="photo-nav">
+                    <img src="../assets/candidate-sandra-cunha-example.png"
+                         alt="Candidato Jefferson Oliveira" />
+                    <nav>
+                        <h2>CANDIDATOS</h2>
+                        <input type="radio" id="radio-s-alves" name="candidates"
+                               class="radio-candidate" value="s-alves"
+                               checked />
+                        <label for="radio-s-alves">CM - Sérgio Lourosa Alves</label>
+
+                        <input type="radio" id="radio-s-cunha" name="candidates"
+                               class="radio-candidate" value="s-cunha" />
+                        <label for="radio-s-cunha">CM - Sandra Cunha</label>
+
+                        <input type="radio" id="radio-j-oliveira"
+                               name="candidates" class="radio-candidate"
+                               value="j-oliveira" />
+                        <label for="radio-j-oliveira">AM - Jefferson Oliveira</label>
+                    </nav>
+                </section>
+                <h2>
+                    JEFFERSON OLIVEIRA
+                    Bloco de Esquerda
+                    Professor, Ator
+                </h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut egestas
+                    elit ac semper rhoncus. Curabitur pellentesque purus in mi viverra
+                    semper.
+                </p>
+                <hr />
+            </section>
+            <section class="section-w-bot-ruler">
+                <h4>
+                    TODO Video
+                </h4>
+                <hr />
+            </section>
+        </main>
+    </div>
 
 </body>
 </html>
