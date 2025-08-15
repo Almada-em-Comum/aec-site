@@ -104,6 +104,15 @@ const candidateJOliveira = new Candidate(
   "Unknown profession"
 )
 
+const candidateFDalva = new Candidate(
+  "Fausto D'Alva",
+  99,
+  "AF",
+  "Bloco de Esquerda",
+  "Unknown profession"
+)
+
+
 function main() {
 
 }
