@@ -9,10 +9,17 @@
     --bg-white: #efe6e9;
     --hr-black: #221e1f40;
     --label-black: #3d3738;
+    --doc-font-size: 16;
+}
+
+@media (max-width: 480px) {
+    :root {
+        --doc-font-size: 12;
+    }
 }
 
 html {
-    font-size: 16;
+    font-size: var(--doc-font-size);
 }
 
 body {
@@ -34,7 +41,6 @@ h1 {
 
 h2 {
     font-size: 2.5rem;
-    margin-top: 0em;
 }
 
 h3 {
@@ -53,12 +59,12 @@ input[type="radio"] {
 label {
     display: flex;
     align-items: center;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 600;
     width: 12em;
-    height: 5rem;
+    height: 4rem;
     padding-left: 1em;
-    margin: 0.5rem auto 0.5rem auto;
+    margin: 0.1rem auto 0.1rem auto;
 }
 
 input[type="radio"]:checked + label,
@@ -66,10 +72,10 @@ label:hover {
     color: var(--white);
     background-color: var(--label-black);
     text-transform: uppercase;
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: 700;
     width: 12em;
-    height: 5rem;
+    height: 4rem;
 }
 
 .logos {
@@ -119,8 +125,13 @@ label:hover {
     flex-direction: row;
 }
 
+.photo-nav h2 {
+    margin-top: 0em;
+    margin-bottom: 0.5em;
+}
+
 .photo-nav > img {
-    width: 55%;
+    width: 60%;
     height: 100%;
     aspect-ratio: auto;
     margin-top: auto;
