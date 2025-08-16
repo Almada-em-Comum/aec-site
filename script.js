@@ -4,13 +4,15 @@ class Candidate {
   #candidateType;
   #party;
   #profession;
+  #photoPath;
 
-  constructor(name, age, candidateType, party, profession) {
+  constructor(name, age, candidateType, party, profession, photoPath) {
     this.#name = name;
     this.#age = age;
     this.#candidateType = candidateType;
     this.#party = party;
     this.#profession = profession;
+    this.#photoPath = photoPath
   }
 
   get name() {
@@ -30,6 +32,10 @@ class Candidate {
 
   get profession() {
     return this.#profession;
+  }
+
+  get photoPath() {
+    return this.#photoPath;
   }
 }
 
@@ -77,7 +83,8 @@ const candidateSLAlves = new Candidate(
   41,
   "CM",
   "LIVRE",
-  "Professor, Cantor"
+  "Professor, Cantor",
+  "candidate-s-alves.JPG"
 )
 
 const candidateSCunha = new Candidate(
@@ -85,7 +92,8 @@ const candidateSCunha = new Candidate(
   99,
   "CM",
   "Bloco de Esquerda",
-  "Unknown profession"
+  "Unknown profession",
+  "candidate-s-cunha.png"
 )
 
 const candidateGFernandes = new Candidate(
@@ -93,7 +101,8 @@ const candidateGFernandes = new Candidate(
   99,
   "AM",
   "LIVRE",
-  "Unknown profession"
+  "Unknown profession",
+  "candidate-g-fernandes.JPG"
 )
 
 const candidateJOliveira = new Candidate(
@@ -101,7 +110,8 @@ const candidateJOliveira = new Candidate(
   34,
   "AM",
   "Bloco de Esquerda",
-  "Unknown profession"
+  "Professor, Ator",
+  "candidate-j-oliveira.JPG"
 )
 
 const candidateFDalva = new Candidate(
@@ -109,10 +119,38 @@ const candidateFDalva = new Candidate(
   99,
   "AF",
   "Bloco de Esquerda",
-  "Unknown profession"
+  "Unknown profession",
+  "candidate-f-dalva.JPG"
 )
 
+const candidatesMap = {
+  "s-alves": candidateSLAlves,
+  "s-cunha": candidateSCunha,
+  "g-fernandes": candidateGFernandes,
+  "j-oliveira": candidateJOliveira,
+  "f-dalva": candidateFDalva
+}
+
+const radioInputs = document.getElementsByClassName("radio-candidate")
+
+function changeCandidate(event) {
+  const candidateImgEl = document.getElementById("candidate-picture")
+  const candidateNameEl = document.getElementById("candidate-name")
+  const candidatePartyEl = document.getElementById("candidate-party")
+  const candidateProfessionEl = document.getElementById("candidate-profession")
+  const selectedCandidate = candidatesMap[event.target.value]
+
+  candidateImgEl.src = "assets/" + selectedCandidate.photoPath
+  candidateImgEl.alt = "Fotografia do candidato " + selectedCandidate.name
+  candidateNameEl.innerText = selectedCandidate.name
+  candidatePartyEl.innerText = selectedCandidate.party
+  candidateProfessionEl.innerText = selectedCandidate.profession
+}
 
 function main() {
-
+  for (let input of radioInputs) {
+    input.addEventListener("change", changeCandidate)
+  }
 }
+
+main()
