@@ -9,12 +9,36 @@
     --bg-white: #efe6e9;
     --hr-black: #221e1f40;
     --label-black: #3d3738;
-    --doc-font-size: 16;
+
+    --doc-font-size: 16px;
+    --content-board-width-percentage: 51.8%
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1350px) and (min-width: 992px) {
     :root {
-        --doc-font-size: 12;
+        --doc-font-size: 13px;
+        --content-board-width-percentage: 60%;
+    }
+}
+
+@media (max-width: 992px) and (min-width: 768px) {
+    :root {
+        --doc-font-size: 11px;
+        --content-board-width-percentage: 70%;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 576px) {
+    :root {
+        --doc-font-size: 9px;
+        --content-board-width-percentage: 72%;
+    }
+}
+
+@media (max-width: 576px) {
+    :root {
+        --doc-font-size: 8px;
+        --content-board-width-percentage: 80%
     }
 }
 
@@ -84,8 +108,11 @@ label:hover {
 }
 
 .party-logo {
-    height: 6.5rem;
+    height: 6.5vw;
     width: auto;
+    min-height: 50px;
+    aspect-ratio: auto;
+
     padding-top: 1rem;
     padding-right: 0.5rem;
 }
@@ -132,8 +159,7 @@ label:hover {
 
 .photo-nav > img {
     width: 60%;
-    height: 100%;
-    aspect-ratio: auto;
+    height: auto;
     margin-top: auto;
     margin-bottom: auto;
 }
@@ -145,7 +171,7 @@ label:hover {
 #content-board {
     display: flex;
     flex-direction: column;
-    width: 51.8%;
+    width: var(--content-board-width-percentage);
     margin: auto;
-    margin-top: -2rem;
+    margin-top: 0rem;
 }
