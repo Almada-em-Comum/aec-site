@@ -165,6 +165,7 @@ label:hover {
 .photo-nav {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .photo-nav h2 {
@@ -189,6 +190,21 @@ label:hover {
     width: var(--content-board-width-percentage);
     margin: auto;
     margin-top: 0rem;
+}
+
+#candidate-section-title {
+    margin-top: 0.1rem;
+}
+
+#candidate-selection-dropdown {
+    margin-top: 1rem;
+}
+
+#candidate-selection-dropdown button.dropdown-toggle {
+    background-color: var(--label-black);
+    text-transform: uppercase;
+    font-size: 2.1rem;
+    font-weight: 700;
 }
 
 body.narrow-screen {
