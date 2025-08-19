@@ -4,14 +4,16 @@ class Candidate {
   #candidateType;
   #party;
   #profession;
+  #bio;
   #photoPath;
 
-  constructor(name, age, candidateType, party, profession, photoPath) {
+  constructor(name, age, candidateType, party, profession, bio, photoPath) {
     this.#name = name;
     this.#age = age;
     this.#candidateType = candidateType;
     this.#party = party;
     this.#profession = profession;
+    this.#bio = bio
     this.#photoPath = photoPath
   }
 
@@ -32,6 +34,10 @@ class Candidate {
 
   get profession() {
     return this.#profession;
+  }
+
+  get bio() {
+    return this.#bio;
   }
 
   get photoPath() {
@@ -84,6 +90,7 @@ const candidateSLAlves = new Candidate(
   "CM",
   "LIVRE",
   "Professor, Cantor",
+  bioSLAlves,
   "candidate-s-alves.JPG"
 )
 
@@ -93,6 +100,7 @@ const candidateSCunha = new Candidate(
   "CM",
   "Bloco de Esquerda",
   "Unknown profession",
+  bioSCunha,
   "candidate-s-cunha.png"
 )
 
@@ -102,6 +110,7 @@ const candidateGFernandes = new Candidate(
   "AM",
   "LIVRE",
   "Unknown profession",
+  bioGFernandes,
   "candidate-g-fernandes.JPG"
 )
 
@@ -111,6 +120,7 @@ const candidateJOliveira = new Candidate(
   "AM",
   "Bloco de Esquerda",
   "Professor, Ator",
+  bioJOliveira,
   "candidate-j-oliveira.JPG"
 )
 
@@ -120,6 +130,7 @@ const candidateFDalva = new Candidate(
   "AF",
   "Bloco de Esquerda",
   "Unknown profession",
+  bioFDalva,
   "candidate-f-dalva.JPG"
 )
 
@@ -138,19 +149,46 @@ function changeCandidate(event) {
   const candidateNameEl = document.getElementById("candidate-name")
   const candidatePartyEl = document.getElementById("candidate-party")
   const candidateProfessionEl = document.getElementById("candidate-profession")
+  const candidateBioEl = document.getElementById("candidate-bio")
   const selectedCandidate = candidatesMap[event.target.value]
 
   candidateImgEl.src = "assets/" + selectedCandidate.photoPath
   candidateImgEl.alt = "Fotografia do candidato " + selectedCandidate.name
   candidateNameEl.innerText = selectedCandidate.name
   candidatePartyEl.innerText = selectedCandidate.party
+  candidateBioEl.innerText = selectedCandidate.bio
   candidateProfessionEl.innerText = selectedCandidate.profession
+}
+
+function reflowNarrowScreen() {
+  const pageTitleEl = document.getElementsByClassName("page-title")[0]
+  const contentBoardEl = document.getElementById("content-board")
+  const headerLogosEl = document.getElementsByClassName("logos")[0]
+
+  const elementsToReflow = [
+    pageTitleEl,
+    contentBoardEl,
+    headerLogosEl
+  ]
+
+  if (window.innerWidth <= 576) {
+    for (let element of elementsToReflow) {
+      element.classList.add("narrow-screen")
+    }
+  } else {
+    for (let element of elementsToReflow) {
+      element.classList.remove("narrow-screen")
+    }
+  }
 }
 
 function main() {
   for (let input of radioInputs) {
     input.addEventListener("change", changeCandidate)
   }
+
+  reflowNarrowScreen()
+  window.addEventListener("resize", reflowNarrowScreen)
 }
 
 main()

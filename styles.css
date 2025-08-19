@@ -11,7 +11,7 @@
     --label-black: #3d3738;
 
     --doc-font-size: 16px;
-    --content-board-width-percentage: 51.8%
+    --content-board-width-percentage: 60%
 }
 
 @media (max-width: 1350px) and (min-width: 992px) {
@@ -37,8 +37,8 @@
 
 @media (max-width: 576px) {
     :root {
-        --doc-font-size: 8px;
-        --content-board-width-percentage: 80%
+        --doc-font-size: 9px;
+        --content-board-width-percentage: 95%
     }
 }
 
@@ -57,6 +57,7 @@ body {
     font-family: "Bricolage Grotesque", sans-serif;
     font-optical-sizing: auto;
     color: var(--black);
+    margin-top: 16px;
 }
 
 h1 {
@@ -73,6 +74,11 @@ h3 {
 
 p {
     font-size: 1.5rem;
+}
+
+header {
+    display: flex;
+    margin-left: calc((100% - var(--content-board-width-percentage)) / 2);
 }
 
 input[type="radio"] {
@@ -108,9 +114,9 @@ label:hover {
 }
 
 .party-logo {
-    height: 6.5vw;
+    height: 5vw;
     width: auto;
-    min-height: 50px;
+    min-height: 44px;
     aspect-ratio: auto;
 
     padding-top: 1rem;
@@ -120,7 +126,11 @@ label:hover {
 .page-title {
     margin-top: 0rem;
     margin-bottom: 0rem;
+    flex-grow: 1;
+    align-self: center;
+
     font-weight: 800;
+    white-space: nowrap;
 }
 
 .subtitle {
@@ -174,4 +184,28 @@ label:hover {
     width: var(--content-board-width-percentage);
     margin: auto;
     margin-top: 0rem;
+}
+
+body.narrow-screen {
+    display: flex;
+    margin-left: 5vw;
+    margin-top: 5vw;
+}
+
+.logos.narrow-screen {
+    display: flex;
+    flex-direction: column;
+}
+
+.logos.narrow-screen .party-logo {
+    padding: 0rem;
+    margin-bottom: 3vw;
+}
+
+.page-title.narrow-screen {
+    font-size: clamp(16px, 7vw, 30px);
+}
+
+#content-board.narrow-screen {
+    order: -1;
 }
