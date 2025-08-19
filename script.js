@@ -164,11 +164,13 @@ function reflowNarrowScreen() {
   const pageTitleEl = document.getElementsByClassName("page-title")[0]
   const contentBoardEl = document.getElementById("content-board")
   const headerLogosEl = document.getElementsByClassName("logos")[0]
+  const candidatePhotoEl = document.getElementById("candidate-picture")
 
   const elementsToReflow = [
     pageTitleEl,
     contentBoardEl,
-    headerLogosEl
+    headerLogosEl,
+    candidatePhotoEl
   ]
 
   if (window.innerWidth <= 576) {

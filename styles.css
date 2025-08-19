@@ -38,7 +38,7 @@
 @media (max-width: 576px) {
     :root {
         --doc-font-size: 9px;
-        --content-board-width-percentage: 95%
+        --content-board-width-percentage: 90%
     }
 }
 
@@ -135,13 +135,13 @@ label:hover {
 
 .subtitle {
     display: block;
-    font-size: 0.78em;
+    font-size: 0.8em;
     font-weight: 600;
 }
 
 .sub-subtitle {
     display: block;
-    font-size: 0.56em;
+    font-size: 0.55em;
     font-weight: 500;
 }
 
@@ -150,11 +150,6 @@ label:hover {
     border-radius: 3px;
     width: 90%;
     margin: 2rem auto 2rem auto;
-}
-
-
-.named-paragraph {
-
 }
 
 .photo-nav {
@@ -206,6 +201,14 @@ body.narrow-screen {
     font-size: clamp(16px, 7vw, 30px);
 }
 
-#content-board.narrow-screen {
-    order: -1;
+.page-title.narrow-screen .subtitle {
+    font-size: 0.9em;
+}
+
+.page-title.narrow-screen .sub-subtitle {
+    font-size: 0.7em;
+}
+
+#candidate-picture.narrow-screen {
+    width: 40%;
 }
