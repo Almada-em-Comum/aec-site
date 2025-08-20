@@ -5,16 +5,19 @@ class Candidate {
   #party;
   #profession;
   #bio;
-  #photoPath;
+  #landscapePhotoPath;
+  #portraitPhotoPath;
 
-  constructor(name, age, candidateType, party, profession, bio, photoPath) {
+  constructor(name, age, candidateType, party, profession, bio,
+              portraitPhotoPath, landscapePhotoPath) {
     this.#name = name;
     this.#age = age;
     this.#candidateType = candidateType;
     this.#party = party;
     this.#profession = profession;
     this.#bio = bio
-    this.#photoPath = photoPath
+    this.#portraitPhotoPath = portraitPhotoPath;
+    this.#landscapePhotoPath = landscapePhotoPath;
   }
 
   get name() {
@@ -40,8 +43,12 @@ class Candidate {
     return this.#bio;
   }
 
-  get photoPath() {
-    return this.#photoPath;
+  get landscapePhotoPath() {
+    return this.#landscapePhotoPath;
+  }
+
+  get portraitPhotoPath() {
+    return this.#portraitPhotoPath;
   }
 }
 
@@ -91,7 +98,8 @@ const candidateSLAlves = new Candidate(
   "LIVRE",
   "Professor, Cantor",
   bioSLAlves,
-  "candidate-s-alves-3-4.jpg"
+  "candidate-s-alves-3-4.jpg",
+  "candidate-s-alves-16-9.jpg"
 )
 
 const candidateSCunha = new Candidate(
@@ -101,7 +109,8 @@ const candidateSCunha = new Candidate(
   "Bloco de Esquerda",
   "Unknown profession",
   bioSCunha,
-  "candidate-s-cunha-3-4.png"
+  "candidate-s-cunha-3-4.png",
+  "candidate-s-cunha-16-9.png"
 )
 
 const candidateGFernandes = new Candidate(
@@ -111,7 +120,8 @@ const candidateGFernandes = new Candidate(
   "LIVRE",
   "Unknown profession",
   bioGFernandes,
-  "candidate-g-fernandes-3-4.jpg"
+  "candidate-g-fernandes-3-4.jpg",
+  "candidate-g-fernandes-16-9.jpg"
 )
 
 const candidateJOliveira = new Candidate(
@@ -121,7 +131,8 @@ const candidateJOliveira = new Candidate(
   "Bloco de Esquerda",
   "Professor, Ator",
   bioJOliveira,
-  "candidate-j-oliveira-3-4.jpg"
+  "candidate-j-oliveira-3-4.jpg",
+  "candidate-j-oliveira-16-9.jpg"
 )
 
 const candidateFDalva = new Candidate(
@@ -131,7 +142,8 @@ const candidateFDalva = new Candidate(
   "Bloco de Esquerda",
   "Unknown profession",
   bioFDalva,
-  "candidate-f-dalva-3-4.jpg"
+  "candidate-f-dalva-3-4.jpg",
+  "candidate-f-dalva-16-9.jpg"
 )
 
 const candidatesMap = {
@@ -153,11 +165,16 @@ function changeCandidate(event) {
   const candidateBioEl = document.getElementById("candidate-bio")
   const selectedCandidate = candidatesMap[event.target.dataset.candidate]
 
-  candidateImgEl.src = "assets/" + selectedCandidate.photoPath
   candidateImgEl.alt = "Fotografia do candidato " + selectedCandidate.name
   candidatePartyEl.innerText = selectedCandidate.party
   candidateBioEl.innerText = selectedCandidate.bio
   candidateProfessionEl.innerText = selectedCandidate.profession
+
+  if (window.innerWidth <= 576) {
+    candidateImgEl.src = "assets/" + selectedCandidate.portraitPhotoPath
+  } else {
+    candidateImgEl.src = "assets/" + selectedCandidate.landscapePhotoPath
+  }
 }
 
 function reflowNarrowScreen() {
