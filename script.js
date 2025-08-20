@@ -155,20 +155,23 @@ const candidatesMap = {
 }
 
 const candidateBtns = document.querySelectorAll(
-  "#candidates-dropdown a.dropdown-item"
-)
+  "#candidates-dropdown a.dropdown-item")
 
 function changeCandidate(event) {
   const candidateImgEl = document.getElementById("candidate-picture")
   const candidatePartyEl = document.getElementById("candidate-party")
   const candidateProfessionEl = document.getElementById("candidate-profession")
   const candidateBioEl = document.getElementById("candidate-bio")
+  const candidateDropdownBtnEl = document.querySelector(
+    "#candidate-selection-dropdown > button.dropdown-toggle")
+
   const selectedCandidate = candidatesMap[event.target.dataset.candidate]
 
   candidateImgEl.alt = "Fotografia do candidato " + selectedCandidate.name
   candidatePartyEl.innerText = selectedCandidate.party
   candidateBioEl.innerText = selectedCandidate.bio
   candidateProfessionEl.innerText = selectedCandidate.profession
+  candidateDropdownBtnEl.innerText = selectedCandidate.name
 
   if (window.innerWidth <= 576) {
     candidateImgEl.src = "assets/" + selectedCandidate.portraitPhotoPath
