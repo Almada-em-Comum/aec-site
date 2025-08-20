@@ -91,7 +91,7 @@ const candidateSLAlves = new Candidate(
   "LIVRE",
   "Professor, Cantor",
   bioSLAlves,
-  "candidate-s-alves.JPG"
+  "candidate-s-alves-3-4.jpg"
 )
 
 const candidateSCunha = new Candidate(
@@ -101,7 +101,7 @@ const candidateSCunha = new Candidate(
   "Bloco de Esquerda",
   "Unknown profession",
   bioSCunha,
-  "candidate-s-cunha.png"
+  "candidate-s-cunha-3-4.png"
 )
 
 const candidateGFernandes = new Candidate(
@@ -111,7 +111,7 @@ const candidateGFernandes = new Candidate(
   "LIVRE",
   "Unknown profession",
   bioGFernandes,
-  "candidate-g-fernandes.JPG"
+  "candidate-g-fernandes-3-4.jpg"
 )
 
 const candidateJOliveira = new Candidate(
@@ -121,7 +121,7 @@ const candidateJOliveira = new Candidate(
   "Bloco de Esquerda",
   "Professor, Ator",
   bioJOliveira,
-  "candidate-j-oliveira.JPG"
+  "candidate-j-oliveira-3-4.jpg"
 )
 
 const candidateFDalva = new Candidate(
@@ -131,7 +131,7 @@ const candidateFDalva = new Candidate(
   "Bloco de Esquerda",
   "Unknown profession",
   bioFDalva,
-  "candidate-f-dalva.JPG"
+  "candidate-f-dalva-3-4.jpg"
 )
 
 const candidatesMap = {
