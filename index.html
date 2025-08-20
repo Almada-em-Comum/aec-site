@@ -39,7 +39,7 @@
     </header>
     <div id="content-board">
         <main>
-            <section class="named-paragraph section-w-bot-ruler">
+            <section class="section-w-bot-ruler">
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut egestas
                     elit ac semper rhoncus. Curabitur pellentesque purus in mi viverra
@@ -53,10 +53,11 @@
                 <hr />
             </section>
             <section id="candidate-section"
-                     class="named-paragraph section-w-bot-ruler">
+                     class="section-w-title section-w-bot-ruler">
+                <h2 class="section-title">Cabeças de Lista</h2>
                 <section class="photo-nav">
                     <img id="candidate-picture"
-                         src="assets/candidate-s-alves-3-4.jpg"
+                         src="assets/candidate-s-alves-16-9.jpg"
                          alt="Fotografia do candidato Sérgio Lourosa Alves" />
                 </section>
                 <div id="candidate-selection-dropdown" class="dropdown">
@@ -65,28 +66,49 @@
                             aria-expanded="false">
                         Sérgio Lourosa Alves
                     </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">
-                            CM - Sérgio Lourosa Alves
-                        </a></li>
-                        <li><a class="dropdown-item" href="#">
-                            CM - Sandra Cunha
-                        </a></li>
-                        <li><a class="dropdown-item" href="#">
-                            AM - Jefferson Oliveira
-                        </a></li>
-                        <li><a class="dropdown-item" href="#">
-                            AF - Fausto D'Alva
-                        </a></li>
-                        <li><a class="dropdown-item" href="#">
-                            AF - Martim Freitas
-                        </a></li>
-                        <li><a class="dropdown-item" href="#">
-                            AF - Tânia Liberato
-                        </a></li>
-                        <li><a class="dropdown-item" href="#">
-                            AF - Jorge Pinto
-                        </a></li>
+                    <ul id="candidates-dropdown" class="dropdown-menu">
+                        <li>
+                            <a class="dropdown-item" href="#candidate-section"
+                            data-candidate="s-alves">
+                                CM - Sérgio Lourosa Alves
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#candidate-section"
+                            data-candidate="s-cunha">
+                                CM - Sandra Cunha
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#candidate-section"
+                            data-candidate="j-oliveira">
+                                AM - Jefferson Oliveira
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#candidate-section"
+                            data-candidate="f-dalva">
+                                AF - Fausto D'Alva
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#candidate-section"
+                            data-candidate="m-freitas">
+                                AF - Martim Freitas
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#candidate-section"
+                            data-candidate="t-liberato">
+                                AF - Tânia Liberato
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#candidate-section"
+                            data-candidate="j-pinto">
+                                AF - Jorge Pinto
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <h2 id="candidate-section-title">

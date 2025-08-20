@@ -142,19 +142,19 @@ const candidatesMap = {
   "f-dalva": candidateFDalva
 }
 
-const radioInputs = document.getElementsByClassName("radio-candidate")
+const candidateBtns = document.querySelectorAll(
+  "#candidates-dropdown a.dropdown-item"
+)
 
 function changeCandidate(event) {
   const candidateImgEl = document.getElementById("candidate-picture")
-  const candidateNameEl = document.getElementById("candidate-name")
   const candidatePartyEl = document.getElementById("candidate-party")
   const candidateProfessionEl = document.getElementById("candidate-profession")
   const candidateBioEl = document.getElementById("candidate-bio")
-  const selectedCandidate = candidatesMap[event.target.value]
+  const selectedCandidate = candidatesMap[event.target.dataset.candidate]
 
   candidateImgEl.src = "assets/" + selectedCandidate.photoPath
   candidateImgEl.alt = "Fotografia do candidato " + selectedCandidate.name
-  candidateNameEl.innerText = selectedCandidate.name
   candidatePartyEl.innerText = selectedCandidate.party
   candidateBioEl.innerText = selectedCandidate.bio
   candidateProfessionEl.innerText = selectedCandidate.profession
@@ -185,8 +185,8 @@ function reflowNarrowScreen() {
 }
 
 function main() {
-  for (let input of radioInputs) {
-    input.addEventListener("change", changeCandidate)
+  for (let btn of candidateBtns) {
+    btn.addEventListener("click", changeCandidate)
   }
 
   reflowNarrowScreen()
