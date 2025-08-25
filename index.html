@@ -8,8 +8,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
         rel="stylesheet">
-    <!--
-    -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
           rel="stylesheet"
           integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
@@ -31,10 +29,14 @@
             </span>
         </h1>
         <div class="logos">
-            <img src="assets/logo-livre.png" alt="Logo do partido LIVRE"
-                class="party-logo" />
-            <img src="assets/logo-be.svg" alt="Logo do partido Bloco de Esquerda"
-                class="party-logo" />
+            <a href="https://partidolivre.pt">
+                <img src="assets/logo-livre.png" alt="Logo do partido LIVRE"
+                    class="party-logo" />
+            </a>
+            <a href="https://www.bloco.org">
+                <img src="assets/logo-be.svg" alt="Logo do partido Bloco de Esquerda"
+                    class="party-logo" />
+            </a>
         </div>
     </header>
     <div id="content-board">
@@ -67,52 +69,68 @@
                         Sérgio Lourosa Alves
                     </button>
                     <ul id="candidates-dropdown" class="dropdown-menu">
+                        <li><h6 class="dropdown-header">
+                            Câmara Municipal
+                        </h6></li>
                         <li>
                             <a class="dropdown-item" href="#candidate-section"
                             data-candidate="s-alves">
-                                CM - Sérgio Lourosa Alves
+                                Sérgio Lourosa Alves
                             </a>
                         </li>
                         <li>
                             <a class="dropdown-item" href="#candidate-section"
                             data-candidate="s-cunha">
-                                CM - Sandra Cunha
+                               Sandra Cunha
+                            </a>
+                        </li>
+                        <li><h6 class="dropdown-header">
+                            Assembleia Municipal
+                        </h6></li>
+                        <li>
+                            <a class="dropdown-item" href="#candidate-section"
+                            data-candidate="j-oliveira">
+                              Jefferson Oliveira
                             </a>
                         </li>
                         <li>
                             <a class="dropdown-item" href="#candidate-section"
                             data-candidate="j-oliveira">
-                                AM - Jefferson Oliveira
+                                Geizy Fernandes
                             </a>
                         </li>
+
+                        <li><h6 class="dropdown-header">
+                            Assembleia de Freguesia
+                        </h6></li>
                         <li>
                             <a class="dropdown-item" href="#candidate-section"
                             data-candidate="f-dalva">
-                                AF - Fausto D'Alva
+                                Fausto D'Alva
                             </a>
                         </li>
                         <li>
                             <a class="dropdown-item" href="#candidate-section"
                             data-candidate="m-freitas">
-                                AF - Martim Freitas
+                                Martim Freitas
                             </a>
                         </li>
                         <li>
                             <a class="dropdown-item" href="#candidate-section"
                             data-candidate="t-liberato">
-                                AF - Tânia Liberato
+                                Tânia Liberato
                             </a>
                         </li>
                         <li>
                             <a class="dropdown-item" href="#candidate-section"
                             data-candidate="j-pinto">
-                                AF - Jorge Pinto
+                                Jorge Pinto
                             </a>
                         </li>
                     </ul>
                 </div>
                 <h2 id="candidate-section-title">
-                    <span id="candidate-party" class="subtitle">
+                    <span id="candidate-party-institution" class="subtitle">
                         LIVRE
                     </span>
                     <span id="candidate-profession" class="sub-subtitle">
@@ -135,8 +153,6 @@
             </section>
         </main>
     </div>
-    <!--
-    -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
             crossorigin="anonymous"></script>

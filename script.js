@@ -1,18 +1,18 @@
 class Candidate {
   #name;
   #age;
-  #candidateType;
+  #institution;
   #party;
   #profession;
   #bio;
   #landscapePhotoPath;
   #portraitPhotoPath;
 
-  constructor(name, age, candidateType, party, profession, bio,
+  constructor(name, age, institution, party, profession, bio,
               portraitPhotoPath, landscapePhotoPath) {
     this.#name = name;
     this.#age = age;
-    this.#candidateType = candidateType;
+    this.#institution = institution;
     this.#party = party;
     this.#profession = profession;
     this.#bio = bio
@@ -27,8 +27,8 @@ class Candidate {
     return this.#age;
   }
 
-  get candidateType() {
-    return this.#candidateType;
+  get institution() {
+    return this.#institution;
   }
 
   get party() {
@@ -94,7 +94,7 @@ molestie id mauris.`;
 const candidateSLAlves = new Candidate(
   "Sérgio Lourosa Alves",
   41,
-  "CM",
+  "Câmara Municipal de Almada",
   "LIVRE",
   "Professor, Cantor",
   bioSLAlves,
@@ -105,7 +105,7 @@ const candidateSLAlves = new Candidate(
 const candidateSCunha = new Candidate(
   "Sandra Cunha",
   99,
-  "CM",
+  "Câmara Municipal de Almada",
   "Bloco de Esquerda",
   "Unknown profession",
   bioSCunha,
@@ -116,7 +116,7 @@ const candidateSCunha = new Candidate(
 const candidateGFernandes = new Candidate(
   "Geizy Fernandes",
   99,
-  "AM",
+  "Assembleia Municipal de Almada",
   "LIVRE",
   "Unknown profession",
   bioGFernandes,
@@ -127,7 +127,7 @@ const candidateGFernandes = new Candidate(
 const candidateJOliveira = new Candidate(
   "Jefferson Oliveira",
   34,
-  "AM",
+  "Assembleia Municipal de Almada",
   "Bloco de Esquerda",
   "Professor, Ator",
   bioJOliveira,
@@ -138,7 +138,7 @@ const candidateJOliveira = new Candidate(
 const candidateFDalva = new Candidate(
   "Fausto D'Alva",
   99,
-  "AF",
+  "Assembleia de Freguesia de Almada",
   "Bloco de Esquerda",
   "Unknown profession",
   bioFDalva,
@@ -159,7 +159,7 @@ const candidateBtns = document.querySelectorAll(
 
 function changeCandidate(event) {
   const candidateImgEl = document.getElementById("candidate-picture")
-  const candidatePartyEl = document.getElementById("candidate-party")
+  const candidatePartyEl = document.getElementById("candidate-party-institution")
   const candidateProfessionEl = document.getElementById("candidate-profession")
   const candidateBioEl = document.getElementById("candidate-bio")
   const candidateDropdownBtnEl = document.querySelector(
@@ -168,7 +168,8 @@ function changeCandidate(event) {
   const selectedCandidate = candidatesMap[event.target.dataset.candidate]
 
   candidateImgEl.alt = "Fotografia do candidato " + selectedCandidate.name
-  candidatePartyEl.innerText = selectedCandidate.party
+  candidatePartyEl.innerText = selectedCandidate.party + " - " +
+    selectedCandidate.institution
   candidateBioEl.innerText = selectedCandidate.bio
   candidateProfessionEl.innerText = selectedCandidate.profession
   candidateDropdownBtnEl.innerText = selectedCandidate.name
@@ -184,7 +185,8 @@ function reflowNarrowScreen() {
   const pageTitleEl = document.getElementsByClassName("page-title")[0]
   const contentBoardEl = document.getElementById("content-board")
   const headerLogosEl = document.getElementsByClassName("logos")[0]
-  const candidatePhotoEl = document.getElementById("candidate-picture")
+  const candidatePhotoEl = document
+        .getElementById("candidate-picture-institution")
 
   const elementsToReflow = [
     pageTitleEl,

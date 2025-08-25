@@ -12,7 +12,7 @@
 
     --doc-font-size: 16px;
     --content-board-width-percentage: 60%;
-    --candidate-selection-dropdown-font-size: 1.5rem;
+    --candidate-selection-dropdown-font-size: 1.2rem;
     --p-font-size: 1.5rem;
 }
 
@@ -183,10 +183,12 @@ label:hover {
 }
 
 .photo-nav > img {
-    width: 100%;
+    width: 95%;
     height: auto;
     margin-top: auto;
     margin-bottom: auto;
+    outline: 3px ridge var(--black);
+
 }
 
 .photo-nav > nav {
@@ -204,6 +206,10 @@ label:hover {
     width: auto;
     padding-top: 0.4rem;
     padding-bottom: 0.4rem;
+}
+
+.dropdown-header {
+    margin-top: 0.5rem;
 }
 
 #content-board {
@@ -255,8 +261,4 @@ body.narrow-screen {
 
 .page-title.narrow-screen .sub-subtitle {
     font-size: 0.7em;
-}
-
-#candidate-picture.narrow-screen {
-
 }
